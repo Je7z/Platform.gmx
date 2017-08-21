@@ -9,8 +9,9 @@
     <sprite>sprites\spr_player</sprite>
     <sprite>sprites\spr_wall</sprite>
     <sprite>sprites\spr_awy_platform</sprite>
-    <sprite>sprites\spr_land</sprite>
-    <sprite>sprites\ladder</sprite>
+    <sprite>sprites\spr_ladder</sprite>
+    <sprite>sprites\spr_moving</sprite>
+    <sprite>sprites\spr_block_dir</sprite>
   </sprites>
   <backgrounds name="background"/>
   <paths name="paths"/>
@@ -23,6 +24,8 @@
     <object>objects\obj_wall</object>
     <object>objects\obj_away</object>
     <object>objects\obj_ladder</object>
+    <object>objects\obj_moving</object>
+    <object>objects\block_dir</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\room0</room>

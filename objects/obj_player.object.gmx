@@ -158,6 +158,16 @@ if(place_meeting(x,y + vsp, obj_ladder)) {
     
 }
 
+with(instance_place(x,y + 1, obj_moving)) {
+    if(bbox_top &gt; other.bbox_bottom) {
+        //other.x += hsp + other.moveH;
+        //other.x = x + hsp + other.moveH;
+        //other.x = ceil(bbox_top - 17- hsp);
+        other.hsp = sign(hsp) * 2;
+        show_debug_message(xprevious);
+     } 
+    
+}
 
 y += vsp;
 x += hsp;
