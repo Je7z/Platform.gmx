@@ -10,21 +10,27 @@
     <sprite>sprites\spr_wall</sprite>
     <sprite>sprites\spr_awy_platform</sprite>
     <sprite>sprites\spr_ladder</sprite>
-    <sprite>sprites\spr_moving</sprite>
-    <sprite>sprites\spr_block_dir</sprite>
+    <sprite>sprites\spr_moving_horizontal</sprite>
+    <sprite>sprites\spr_moving_vertical</sprite>
   </sprites>
   <backgrounds name="background"/>
   <paths name="paths"/>
   <scripts name="scripts">
     <script>scripts\Collision_Vertical.gml</script>
     <script>scripts\Collision_Horizontal.gml</script>
+    <script>scripts\scr_level_interactive_left.gml</script>
+    <script>scripts\scr_level_interactive_right.gml</script>
+    <script>scripts\scr_level_interactive_up.gml</script>
+    <script>scripts\scr_level_interactive_down.gml</script>
   </scripts>
   <objects name="objects">
     <object>objects\obj_player</object>
     <object>objects\obj_wall</object>
     <object>objects\obj_away</object>
     <object>objects\obj_ladder</object>
-    <object>objects\obj_moving</object>
+    <object>objects\obj_moving_horizontal</object>
+    <object>objects\testando</object>
+    <object>objects\obj_moving_vertical</object>
     <object>objects\block_dir</object>
   </objects>
   <rooms name="rooms">

@@ -82,6 +82,12 @@ if(place_meeting(x,y + 1, obj_wall) &amp;&amp; KJ) {
     vsp = -jumpspeed;
 }
 
+
+if(place_meeting(x,y, obj_moving_vertical) &amp;&amp; KJ) {
+    vsp = -jumpspeed;
+}
+
+
 //Check Collision with obj_away
 with(instance_place(x,y + vsp,obj_away)) {
     if(bbox_top &gt; other.bbox_bottom) {
@@ -158,6 +164,7 @@ if(place_meeting(x,y + vsp, obj_ladder)) {
     
 }
 
+/*
 with(instance_place(x,y + 1, obj_moving)) {
     if(bbox_top &gt; other.bbox_bottom) {
         //other.x += hsp + other.moveH;
@@ -168,6 +175,7 @@ with(instance_place(x,y + 1, obj_moving)) {
      } 
     
 }
+*/
 
 y += vsp;
 x += hsp;

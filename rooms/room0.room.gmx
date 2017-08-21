@@ -78,11 +78,12 @@
     <instance objName="obj_away" x="385" y="385" name="inst_B08BD74D" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_away" x="350" y="385" name="inst_30155179" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_away" x="315" y="385" name="inst_88BB6CA1" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_moving" x="70" y="315" name="inst_EA7B2AF3" locked="0" code="" scaleX="2.05882358551025" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="block_dir" x="35" y="315" name="inst_359A18C8" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="block_dir" x="455" y="315" name="inst_915B2067" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_ladder" x="175" y="420" name="inst_F62B8048" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_ladder" x="175" y="385" name="inst_C321B22D" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_moving_horizontal" x="245" y="315" name="inst_E6AD80F4" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_moving_vertical" x="105" y="315" name="inst_42A8E674" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_moving_vertical" x="140" y="315" name="inst_3AD69878" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_moving_horizontal" x="280" y="315" name="inst_EBC30B32" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
   </instances>
   <tiles/>
   <PhysicsWorld>0</PhysicsWorld>
