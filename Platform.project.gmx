@@ -12,6 +12,9 @@
     <sprite>sprites\spr_ladder</sprite>
     <sprite>sprites\spr_moving_horizontal</sprite>
     <sprite>sprites\spr_moving_vertical</sprite>
+    <sprite>sprites\spr_coins_blonze</sprite>
+    <sprite>sprites\spr_coins_silver</sprite>
+    <sprite>sprites\spr_coins_gold</sprite>
   </sprites>
   <backgrounds name="background"/>
   <paths name="paths"/>
@@ -31,7 +34,9 @@
     <object>objects\obj_moving_horizontal</object>
     <object>objects\testando</object>
     <object>objects\obj_moving_vertical</object>
-    <object>objects\block_dir</object>
+    <object>objects\par_coins_blonze</object>
+    <object>objects\par_coins_silver</object>
+    <object>objects\par_coins_gold</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\room0</room>

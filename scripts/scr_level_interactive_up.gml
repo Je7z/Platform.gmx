@@ -17,6 +17,6 @@ if (x == finish_x && y == finish_y){
 
 if (place_meeting(x, y - 1, obj_player)){
     if(bbox_top > obj_player.bbox_bottom) {
-        obj_player.y = ceil(bbox_top-36-speed);
+        obj_player.y = ceil(bbox_top-35-speed);
     }
 }
