@@ -7,15 +7,25 @@
   <sounds name="sound"/>
   <sprites name="sprites">
     <sprite>sprites\spr_player</sprite>
-    <sprite>sprites\spr_wall</sprite>
-    <sprite>sprites\spr_awy_platform</sprite>
-    <sprite>sprites\spr_ladder</sprite>
-    <sprite>sprites\spr_moving_horizontal</sprite>
-    <sprite>sprites\spr_moving_vertical</sprite>
-    <sprite>sprites\spr_coins_blonze</sprite>
-    <sprite>sprites\spr_coins_silver</sprite>
-    <sprite>sprites\spr_coins_gold</sprite>
+    <sprite>sprites\spr_ladder_mid</sprite>
+    <sprite>sprites\spr_ladder_top</sprite>
+    <sprites name="spr tileset - glass">
+      <sprite>sprites\spr_slice28_28</sprite>
+      <sprite>sprites\spr_slice32_32</sprite>
+      <sprite>sprites\spr_slice29_29</sprite>
+      <sprite>sprites\spr_slice33_33</sprite>
+      <sprite>sprites\spr_slice24_24</sprite>
+      <sprite>sprites\spr_slice23_23</sprite>
+      <sprite>sprites\spr_slice20_20</sprite>
+      <sprite>sprites\spr_slice19_19</sprite>
+      <sprite>sprites\spr_slice04_04</sprite>
+      <sprite>sprites\spr_slice03_03</sprite>
+      <sprite>sprites\spr_slice02_02</sprite>
+    </sprites>
     <sprite>sprites\spr_spring</sprite>
+    <sprite>sprites\spr_coin_blonze</sprite>
+    <sprite>sprites\spr_coin_gold</sprite>
+    <sprite>sprites\spr_coin_silver</sprite>
   </sprites>
   <backgrounds name="background"/>
   <paths name="paths"/>
@@ -41,9 +51,34 @@
         <object>objects\par_coins_blonze</object>
         <object>objects\par_coins_gold</object>
       </objects>
+      <object>objects\obj_player</object>
     </objects>
+    <objects name="obj_tileset_wall">
+      <object>objects\obj_slice32_32</object>
+      <object>objects\obj_slice28_28</object>
+      <object>objects\obj_slice23_23</object>
+      <object>objects\obj_slice24_24</object>
+      <object>objects\obj_slice19_19</object>
+      <object>objects\obj_slice29_29</object>
+      <object>objects\obj_slice20_20</object>
+      <object>objects\obj_slice04_04</object>
+      <object>objects\obj_slice03_03</object>
+      <object>objects\obj_slice02_02</object>
+    </objects>
+    <objects name="scener tileset">
+      <object>objects\obj_slice33_33</object>
+    </objects>
+    <objects name="other">
+      <object>objects\obj_ladder_top</object>
+      <object>objects\obj_ladder_mid</object>
+      <object>objects\obj_spring</object>
+    </objects>
+    <object>objects\obj_coin_silver</object>
+    <object>objects\obj_coin_gold</object>
+    <object>objects\obj_coin_blonze</object>
   </objects>
   <rooms name="rooms">
+    <room>rooms\room1</room>
     <room>rooms\room0</room>
   </rooms>
   <help>
