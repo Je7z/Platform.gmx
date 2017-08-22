@@ -25,7 +25,7 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if(place_meeting(x,y, obj_player)) {
+            <string>if(place_meeting(x,y, par_player)) {
     global.gold_coins += 5;
     instance_destroy();
 }

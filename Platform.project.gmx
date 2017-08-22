@@ -15,6 +15,7 @@
     <sprite>sprites\spr_coins_blonze</sprite>
     <sprite>sprites\spr_coins_silver</sprite>
     <sprite>sprites\spr_coins_gold</sprite>
+    <sprite>sprites\spr_spring</sprite>
   </sprites>
   <backgrounds name="background"/>
   <paths name="paths"/>
@@ -27,16 +28,20 @@
     <script>scripts\scr_level_interactive_down.gml</script>
   </scripts>
   <objects name="objects">
-    <object>objects\obj_player</object>
-    <object>objects\obj_wall</object>
-    <object>objects\obj_away</object>
-    <object>objects\obj_ladder</object>
-    <object>objects\obj_moving_horizontal</object>
-    <object>objects\testando</object>
-    <object>objects\obj_moving_vertical</object>
-    <object>objects\par_coins_blonze</object>
-    <object>objects\par_coins_silver</object>
-    <object>objects\par_coins_gold</object>
+    <objects name="Par - Objects">
+      <object>objects\par_player</object>
+      <object>objects\par_wall</object>
+      <object>objects\par_ladder</object>
+      <object>objects\par_moving_horizontal</object>
+      <object>objects\par_moving_vertical</object>
+      <object>objects\par_spring</object>
+      <object>objects\par_on_way</object>
+      <objects name="Par - Coins">
+        <object>objects\par_coins_silver</object>
+        <object>objects\par_coins_blonze</object>
+        <object>objects\par_coins_gold</object>
+      </objects>
+    </objects>
   </objects>
   <rooms name="rooms">
     <room>rooms\room0</room>

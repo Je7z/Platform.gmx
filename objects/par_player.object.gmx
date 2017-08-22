@@ -34,6 +34,7 @@ vsp = 0;
 jumpspeed = 9;
 movespeed = 2;
 ladderspeed = 2;
+forcespring = 15;
 
 
 </string>
@@ -78,18 +79,18 @@ moveH = KR + KL;
 moveV = KU + KD;
 hsp = moveH * movespeed;
 
-if(place_meeting(x,y + 1, obj_wall) &amp;&amp; KJ) {
+if(place_meeting(x,y + 1, par_wall) &amp;&amp; KJ) {
     vsp = -jumpspeed;
 }
 
-
+/*
 if(place_meeting(x,y, obj_moving_vertical) &amp;&amp; KJ) {
     vsp = -jumpspeed;
 }
-
+*/
 
 //Check Collision with obj_away
-with(instance_place(x,y + vsp,obj_away)) {
+with(instance_place(x,y + vsp,par_on_way)) {
     if(bbox_top &gt; other.bbox_bottom) {
         other.away = true;
     } else {
@@ -98,9 +99,9 @@ with(instance_place(x,y + vsp,obj_away)) {
 }
 
 //Collision Horizontal - obj_wall
-if(place_meeting(x + hsp,y, obj_wall)) {
+if(place_meeting(x + hsp,y, par_wall)) {
 
-    while(!place_meeting(x + sign(hsp),y, obj_wall)) {
+    while(!place_meeting(x + sign(hsp),y, par_wall)) {
         x += sign(hsp);
     }
     
@@ -108,9 +109,9 @@ if(place_meeting(x + hsp,y, obj_wall)) {
 }
 
 //Collision Vertical - obj_wall
-if(place_meeting(x,y + vsp, obj_wall)) {
+if(place_meeting(x,y + vsp, par_wall)) {
 
-    while(!place_meeting(x,y + sign(vsp), obj_wall)) {
+    while(!place_meeting(x,y + sign(vsp), par_wall)) {
         y += sign(vsp);
     }
     
@@ -119,9 +120,9 @@ if(place_meeting(x,y + vsp, obj_wall)) {
 
 //Collision Vertical - obj_away
 if(away) {
-    if(place_meeting(x,y + vsp, obj_away)) {
+    if(place_meeting(x,y + vsp, par_on_way)) {
     
-        while(!place_meeting(x,y + sign(vsp), obj_away)) {
+        while(!place_meeting(x,y + sign(vsp), par_on_way)) {
             y += sign(vsp);
         }
         
@@ -136,15 +137,15 @@ if(away) {
 
 
 //Collision Ladder
-if(place_meeting(x,y + vsp, obj_ladder)) {
+if(place_meeting(x,y + vsp, par_ladder)) {
 
-    while(!place_meeting(x,y + sign(vsp), obj_ladder)) {
+    while(!place_meeting(x,y + sign(vsp), par_ladder)) {
         y += sign(vsp);
     }
     
     vsp = moveV * ladderspeed;
     
-    if(!collision_point(x,y + (obj_player.sprite_height - 1),obj_ladder,false, true)) {
+    if(!collision_point(x,y + (other.sprite_height - 1),par_ladder,false, true)) {
     
         vsp = 0;
         
@@ -164,18 +165,15 @@ if(place_meeting(x,y + vsp, obj_ladder)) {
     
 }
 
-/*
-with(instance_place(x,y + 1, obj_moving)) {
+//Spring Collision
+with(instance_place(x,y + 1, par_spring)) {
     if(bbox_top &gt; other.bbox_bottom) {
-        //other.x += hsp + other.moveH;
-        //other.x = x + hsp + other.moveH;
-        //other.x = ceil(bbox_top - 17- hsp);
-        other.hsp = sign(hsp) * 2;
-        show_debug_message(xprevious);
-     } 
-    
+        if(other.vsp &gt; -0.1) {
+            other.vsp = -other.forcespring;
+        }
+    } 
 }
-*/
+
 
 y += vsp;
 x += hsp;
