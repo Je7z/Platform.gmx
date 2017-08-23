@@ -26,6 +26,24 @@
     <sprite>sprites\spr_coin_blonze</sprite>
     <sprite>sprites\spr_coin_gold</sprite>
     <sprite>sprites\spr_coin_silver</sprite>
+    <sprites name="Keys">
+      <sprite>sprites\spr_keyYellow</sprite>
+      <sprite>sprites\spr_keyRed</sprite>
+      <sprite>sprites\spr_keyGreen</sprite>
+      <sprite>sprites\spr_keyBlue</sprite>
+    </sprites>
+    <sprites name="Locks">
+      <sprite>sprites\spr_lock_yellow</sprite>
+      <sprite>sprites\spr_lock_red</sprite>
+      <sprite>sprites\spr_lock_green</sprite>
+      <sprite>sprites\spr_lock_blue</sprite>
+    </sprites>
+    <sprites name="Button">
+      <sprite>sprites\spr_buttonYellow</sprite>
+      <sprite>sprites\spr_buttonRed</sprite>
+      <sprite>sprites\spr_buttonGreen</sprite>
+      <sprite>sprites\spr_buttonBlue</sprite>
+    </sprites>
   </sprites>
   <backgrounds name="background"/>
   <paths name="paths"/>
@@ -38,6 +56,7 @@
     <script>scripts\scr_level_interactive_down.gml</script>
   </scripts>
   <objects name="objects">
+    <object>objects\obj_player</object>
     <objects name="Par - Objects">
       <object>objects\par_player</object>
       <object>objects\par_wall</object>
@@ -51,7 +70,11 @@
         <object>objects\par_coins_blonze</object>
         <object>objects\par_coins_gold</object>
       </objects>
-      <object>objects\obj_player</object>
+      <objects name="Par - Key End Lock">
+        <object>objects\par_key</object>
+        <object>objects\par_lock</object>
+      </objects>
+      <object>objects\par_button</object>
     </objects>
     <objects name="obj_tileset_wall">
       <object>objects\obj_slice32_32</object>
@@ -76,6 +99,28 @@
     <object>objects\obj_coin_silver</object>
     <object>objects\obj_coin_gold</object>
     <object>objects\obj_coin_blonze</object>
+    <objects name="OBJ - Button">
+      <object>objects\obj_buttonyellow</object>
+      <object>objects\obj_buttonred</object>
+      <object>objects\obj_buttongreen</object>
+      <object>objects\obj_buttonblue</object>
+    </objects>
+    <objects name="OBJ - Keys">
+      <objects name="FOR - Teste">
+        <object>objects\obj_keyblue</object>
+        <object>objects\obj_keygreen</object>
+        <object>objects\obj_keyyellow</object>
+        <object>objects\obj_keyred</object>
+      </objects>
+    </objects>
+    <objects name="OBJ - Locks">
+      <objects name="FOR - Teste">
+        <object>objects\obj_lockblue</object>
+        <object>objects\obj_lockred</object>
+        <object>objects\obj_lockyellow</object>
+        <object>objects\obj_lockgreen</object>
+      </objects>
+    </objects>
   </objects>
   <rooms name="rooms">
     <room>rooms\room1</room>
