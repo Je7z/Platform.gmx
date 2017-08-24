@@ -44,6 +44,10 @@
       <sprite>sprites\spr_buttonGreen</sprite>
       <sprite>sprites\spr_buttonBlue</sprite>
     </sprites>
+    <sprite>sprites\spr_switch_blue</sprite>
+    <sprite>sprites\spr_switch_green</sprite>
+    <sprite>sprites\spr_switch_red</sprite>
+    <sprite>sprites\spr_switch_yellow</sprite>
   </sprites>
   <backgrounds name="background"/>
   <paths name="paths"/>
@@ -75,6 +79,7 @@
         <object>objects\par_lock</object>
       </objects>
       <object>objects\par_button</object>
+      <object>objects\par_switch</object>
     </objects>
     <objects name="obj_tileset_wall">
       <object>objects\obj_slice32_32</object>
@@ -119,6 +124,14 @@
         <object>objects\obj_lockred</object>
         <object>objects\obj_lockyellow</object>
         <object>objects\obj_lockgreen</object>
+      </objects>
+    </objects>
+    <objects name="OBJ - SWITCH">
+      <objects name="FOR - Teste">
+        <object>objects\obj_switch_blue</object>
+        <object>objects\obj_switch_green</object>
+        <object>objects\obj_switch_red</object>
+        <object>objects\obj_switch_yellow</object>
       </objects>
     </objects>
   </objects>
