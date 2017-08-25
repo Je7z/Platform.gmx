@@ -48,6 +48,11 @@
     <sprite>sprites\spr_switch_green</sprite>
     <sprite>sprites\spr_switch_red</sprite>
     <sprite>sprites\spr_switch_yellow</sprite>
+    <sprite>sprites\spr_weight</sprite>
+    <sprite>sprites\spr_weightChained</sprite>
+    <sprite>sprites\spr_chain</sprite>
+    <sprite>sprites\spr_bridge</sprite>
+    <sprite>sprites\spr_bridgeLogs</sprite>
   </sprites>
   <backgrounds name="background"/>
   <paths name="paths"/>
@@ -80,6 +85,7 @@
       </objects>
       <object>objects\par_button</object>
       <object>objects\par_switch</object>
+      <object>objects\par_bridge</object>
     </objects>
     <objects name="obj_tileset_wall">
       <object>objects\obj_slice32_32</object>
@@ -134,6 +140,11 @@
         <object>objects\obj_switch_yellow</object>
       </objects>
     </objects>
+    <object>objects\obj_chain</object>
+    <object>objects\obj_weightChained</object>
+    <object>objects\obj_weight</object>
+    <object>objects\obj_bridge</object>
+    <object>objects\obj_bridgeLogs</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\room1</room>
