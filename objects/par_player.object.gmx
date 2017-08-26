@@ -149,11 +149,7 @@ if(place_meeting(x,y + 1, par_wall) &amp;&amp; KJ) {
     vsp = -jumpspeed;
 }
 
-/*
-if(place_meeting(x,y, obj_moving_vertical) &amp;&amp; KJ) {
-    vsp = -jumpspeed;
-}
-*/
+
 
 //Check Collision with obj_away
 with(instance_place(x,y + vsp,par_on_way)) {
@@ -178,6 +174,16 @@ if(place_meeting(x + hsp,y, par_wall)) {
 if(place_meeting(x,y + vsp, par_wall)) {
 
     while(!place_meeting(x,y + sign(vsp), par_wall)) {
+        y += sign(vsp);
+    }
+    
+    vsp = 0;     
+}
+
+//Collision Vertical - obj_weight_dragging
+if(place_meeting(x,y + vsp, obj_weight_dragging)) {
+
+    while(!place_meeting(x,y + sign(vsp), obj_weight_dragging)) {
         y += sign(vsp);
     }
     
@@ -275,32 +281,6 @@ global.gold_coins = 0;
 
 global.coins = global.blonze_coins + global.silver_coins + global.gold_coins;
 
-</string>
-          </argument>
-        </arguments>
-      </action>
-      <action>
-        <libid>1</libid>
-        <id>603</id>
-        <kind>7</kind>
-        <userelative>0</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>-1</useapplyto>
-        <exetype>2</exetype>
-        <functionname></functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-        <arguments>
-          <argument>
-            <kind>1</kind>
-            <string>/*
-show_debug_message(keyblue);
-show_debug_message(keygreen);
-show_debug_message(keyred);
-show_debug_message(keyyellow);
-*/
 </string>
           </argument>
         </arguments>

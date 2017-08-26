@@ -6,10 +6,10 @@
   <colkind>1</colkind>
   <coltolerance>0</coltolerance>
   <sepmasks>0</sepmasks>
-  <bboxmode>2</bboxmode>
-  <bbox_left>6</bbox_left>
-  <bbox_right>26</bbox_right>
-  <bbox_top>5</bbox_top>
+  <bboxmode>0</bboxmode>
+  <bbox_left>0</bbox_left>
+  <bbox_right>34</bbox_right>
+  <bbox_top>0</bbox_top>
   <bbox_bottom>34</bbox_bottom>
   <HTile>0</HTile>
   <VTile>0</VTile>
@@ -17,9 +17,9 @@
     <TextureGroup0>0</TextureGroup0>
   </TextureGroups>
   <For3D>0</For3D>
-  <width>33</width>
+  <width>35</width>
   <height>35</height>
   <frames>
-    <frame index="0">images\spr_weight_0.png</frame>
+    <frame index="0">images\spr_liquidWater_0.png</frame>
   </frames>
 </sprite>

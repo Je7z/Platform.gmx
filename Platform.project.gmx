@@ -53,6 +53,8 @@
     <sprite>sprites\spr_chain</sprite>
     <sprite>sprites\spr_bridge</sprite>
     <sprite>sprites\spr_bridgeLogs</sprite>
+    <sprite>sprites\spr_liquidWaterTop_mid</sprite>
+    <sprite>sprites\spr_liquidWater</sprite>
   </sprites>
   <backgrounds name="background"/>
   <paths name="paths"/>
@@ -132,7 +134,7 @@
         <object>objects\obj_lockgreen</object>
       </objects>
     </objects>
-    <objects name="OBJ - SWITCH">
+    <objects name="OBJ - Switch">
       <objects name="FOR - Teste">
         <object>objects\obj_switch_blue</object>
         <object>objects\obj_switch_green</object>
@@ -141,10 +143,16 @@
       </objects>
     </objects>
     <object>objects\obj_chain</object>
-    <object>objects\obj_weightChained</object>
     <object>objects\obj_weight</object>
+    <object>objects\obj_weightChained</object>
     <object>objects\obj_bridge</object>
     <object>objects\obj_bridgeLogs</object>
+    <objects name="OBJ - Weight - Modify">
+      <object>objects\obj_weightChained_gravity</object>
+      <object>objects\obj_weight_dragging</object>
+    </objects>
+    <object>objects\obj_liquidWaterTop_mid</object>
+    <object>objects\obj_liquidWater</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\room1</room>
