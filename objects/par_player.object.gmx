@@ -38,7 +38,7 @@ forcespring = 15;
 
 isfacingright = true;
 
-
+lasercollision = false;
 </string>
           </argument>
         </arguments>
@@ -95,6 +95,26 @@ lockyellow = false;
           </argument>
         </arguments>
       </action>
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string></string>
+          </argument>
+        </arguments>
+      </action>
     </event>
     <event eventtype="3" enumb="0">
       <action>
@@ -145,6 +165,14 @@ if(isfacingright) {
     image_xscale = -1;
 }
 
+
+
+inst_laser = instance_place(x + hsp,y + vsp, par_laser);
+
+with(inst_laser) {
+    other.lasercollision = lasercollision;
+}
+
 if(place_meeting(x,y + 1, par_wall) &amp;&amp; KJ) {
     vsp = -jumpspeed;
 }
@@ -168,6 +196,29 @@ if(place_meeting(x + hsp,y, par_wall)) {
     }
     
     hsp = 0;
+}
+
+//Laser Collision
+if(lasercollision) {
+    //Collision Horizontal - obj_laser
+    if(place_meeting(x + hsp,y, par_laser)) {
+    
+        while(!place_meeting(x + sign(hsp),y, par_laser)) {
+            x += sign(hsp);
+        }
+        
+        hsp = 0;
+    }
+    
+    //Collision Vertical - obj_laser
+    if(place_meeting(x,y + vsp, par_laser)) {
+    
+        while(!place_meeting(x,y + sign(vsp), par_laser)) {
+            y += sign(vsp);
+        }
+        
+        vsp = 0;     
+    }
 }
 
 //Collision Vertical - obj_wall
@@ -252,6 +303,9 @@ y += vsp;
 x += hsp;
 
 
+show_debug_message(lasercollision);
+
+
 </string>
           </argument>
         </arguments>
@@ -282,6 +336,26 @@ global.gold_coins = 0;
 global.coins = global.blonze_coins + global.silver_coins + global.gold_coins;
 
 </string>
+          </argument>
+        </arguments>
+      </action>
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string></string>
           </argument>
         </arguments>
       </action>

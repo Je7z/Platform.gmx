@@ -44,10 +44,6 @@
       <sprite>sprites\spr_buttonGreen</sprite>
       <sprite>sprites\spr_buttonBlue</sprite>
     </sprites>
-    <sprite>sprites\spr_switch_blue</sprite>
-    <sprite>sprites\spr_switch_green</sprite>
-    <sprite>sprites\spr_switch_red</sprite>
-    <sprite>sprites\spr_switch_yellow</sprite>
     <sprite>sprites\spr_weight</sprite>
     <sprite>sprites\spr_weightChained</sprite>
     <sprite>sprites\spr_chain</sprite>
@@ -55,6 +51,44 @@
     <sprite>sprites\spr_bridgeLogs</sprite>
     <sprite>sprites\spr_liquidWaterTop_mid</sprite>
     <sprite>sprites\spr_liquidWater</sprite>
+    <sprite>sprites\spr_laserRight</sprite>
+    <sprite>sprites\spr_laserLeft</sprite>
+    <sprites name="spr tileset - metal">
+      <sprite>sprites\spr_slice03_03_metal</sprite>
+      <sprite>sprites\spr_slice04_04_metal</sprite>
+      <sprite>sprites\spr_slice02_02_metal</sprite>
+      <sprite>sprites\spr_slice17_17_metal</sprite>
+      <sprite>sprites\spr_slice18_18_metal</sprite>
+      <sprite>sprites\spr_slice31_31_metal</sprite>
+      <sprite>sprites\spr_slice22_22_metal</sprite>
+      <sprite>sprites\spr_slice21_21_metal</sprite>
+      <sprite>sprites\spr_slice27_27_metal</sprite>
+      <sprite>sprites\spr_slice26_26_metal</sprite>
+      <sprite>sprites\spr_slice30_30_metal</sprite>
+    </sprites>
+    <sprites name="Laser">
+      <sprites name="Horizontal">
+        <sprite>sprites\spr_laserRedHorizontal</sprite>
+        <sprite>sprites\spr_laserYellowHorizontal</sprite>
+        <sprite>sprites\spr_laserGreenHorizontal</sprite>
+        <sprite>sprites\spr_laserBlueHorizontal</sprite>
+      </sprites>
+      <sprites name="Vertical">
+        <sprite>sprites\spr_laseRedVertical</sprite>
+        <sprite>sprites\spr_laseGreenVertical</sprite>
+        <sprite>sprites\spr_laseBlueVertical</sprite>
+        <sprite>sprites\spr_laseYellowVertical</sprite>
+      </sprites>
+    </sprites>
+    <sprites name="Switch">
+      <sprite>sprites\spr_switch_yellow</sprite>
+      <sprite>sprites\spr_switch_red</sprite>
+      <sprite>sprites\spr_switch_blue</sprite>
+      <sprite>sprites\spr_switch_green</sprite>
+    </sprites>
+    <sprite>sprites\spr_walking</sprite>
+    <sprite>sprites\spr_laserUp</sprite>
+    <sprite>sprites\spr_laserDown</sprite>
   </sprites>
   <backgrounds name="background"/>
   <paths name="paths"/>
@@ -88,6 +122,7 @@
       <object>objects\par_button</object>
       <object>objects\par_switch</object>
       <object>objects\par_bridge</object>
+      <object>objects\par_laser</object>
     </objects>
     <objects name="obj_tileset_wall">
       <object>objects\obj_slice32_32</object>
@@ -101,60 +136,110 @@
       <object>objects\obj_slice03_03</object>
       <object>objects\obj_slice02_02</object>
     </objects>
+    <objects name="obj_tileset_metal">
+      <object>objects\obj_slice02_02_metal</object>
+      <object>objects\obj_slice03_03_metal</object>
+      <object>objects\obj_slice04_04_metal</object>
+      <object>objects\obj_slice18_18_metal</object>
+      <object>objects\obj_slice17_17_metal</object>
+      <object>objects\obj_slice31_31_metal</object>
+      <object>objects\obj_slice22_22_metal</object>
+      <object>objects\obj_slice21_21_metal</object>
+      <object>objects\obj_slice27_27_metal</object>
+      <object>objects\obj_slice26_26_metal</object>
+      <object>objects\obj_slice30_30_metal</object>
+    </objects>
     <objects name="scener tileset">
       <object>objects\obj_slice33_33</object>
+      <object>objects\obj_liquidWater</object>
+      <object>objects\obj_liquidWaterTop_mid</object>
     </objects>
     <objects name="other">
       <object>objects\obj_ladder_top</object>
       <object>objects\obj_ladder_mid</object>
       <object>objects\obj_spring</object>
+      <object>objects\obj_bridge</object>
+      <object>objects\obj_weightChained_gravity</object>
+      <object>objects\obj_weight_dragging</object>
+      <object>objects\obj_coin_silver</object>
+      <object>objects\obj_coin_gold</object>
+      <object>objects\obj_coin_blonze</object>
+      <object>objects\obj_bridgeLogs</object>
+      <object>objects\obj_weight</object>
+      <object>objects\obj_weightChained</object>
     </objects>
-    <object>objects\obj_coin_silver</object>
-    <object>objects\obj_coin_gold</object>
-    <object>objects\obj_coin_blonze</object>
     <objects name="OBJ - Button">
       <object>objects\obj_buttonyellow</object>
       <object>objects\obj_buttonred</object>
       <object>objects\obj_buttongreen</object>
       <object>objects\obj_buttonblue</object>
     </objects>
-    <objects name="OBJ - Keys">
-      <objects name="FOR - Teste">
+    <objects name="Keys And Locks">
+      <objects name="Blue">
+        <object>objects\obj_lockblue</object>
         <object>objects\obj_keyblue</object>
+      </objects>
+      <objects name="Green">
+        <object>objects\obj_lockgreen</object>
         <object>objects\obj_keygreen</object>
-        <object>objects\obj_keyyellow</object>
+      </objects>
+      <objects name="Red">
+        <object>objects\obj_lockred</object>
         <object>objects\obj_keyred</object>
       </objects>
-    </objects>
-    <objects name="OBJ - Locks">
-      <objects name="FOR - Teste">
-        <object>objects\obj_lockblue</object>
-        <object>objects\obj_lockred</object>
+      <objects name="Yellow">
         <object>objects\obj_lockyellow</object>
-        <object>objects\obj_lockgreen</object>
+        <object>objects\obj_keyyellow</object>
       </objects>
     </objects>
-    <objects name="OBJ - Switch">
-      <objects name="FOR - Teste">
-        <object>objects\obj_switch_blue</object>
-        <object>objects\obj_switch_green</object>
-        <object>objects\obj_switch_red</object>
-        <object>objects\obj_switch_yellow</object>
+    <objects name="Switch and Laser">
+      <objects name="Vertical">
+        <objects name="Red">
+          <object>objects\obj_switch_red_v</object>
+          <object>objects\obj_laseRedVertical</object>
+        </objects>
+        <objects name="Yellow">
+          <object>objects\obj_laseYellowVertical</object>
+          <object>objects\obj_switch_yellow_v</object>
+        </objects>
+        <objects name="Green">
+          <object>objects\obj_switch_green_v</object>
+          <object>objects\obj_laseGreenVertical</object>
+        </objects>
+        <objects name="Blue">
+          <object>objects\obj_laseBlueVertical</object>
+          <object>objects\obj_switch_blue_v</object>
+        </objects>
+      </objects>
+      <objects name="Horizontal">
+        <objects name="Yellow">
+          <object>objects\obj_laserYellowHorizontal</object>
+          <object>objects\obj_switch_yellow</object>
+        </objects>
+        <objects name="Red">
+          <object>objects\obj_laserRedHorizontal</object>
+          <object>objects\obj_switch_red</object>
+        </objects>
+        <objects name="Green">
+          <object>objects\obj_laserGreenHorizontal</object>
+          <object>objects\obj_switch_green</object>
+        </objects>
+        <objects name="Blue">
+          <object>objects\obj_laserBlueHorizontal</object>
+          <object>objects\obj_switch_blue</object>
+        </objects>
       </objects>
     </objects>
-    <object>objects\obj_chain</object>
-    <object>objects\obj_weight</object>
-    <object>objects\obj_weightChained</object>
-    <object>objects\obj_bridge</object>
-    <object>objects\obj_bridgeLogs</object>
-    <objects name="OBJ - Weight - Modify">
-      <object>objects\obj_weightChained_gravity</object>
-      <object>objects\obj_weight_dragging</object>
+    <objects name="Scener Objects">
+      <object>objects\obj_laserLeft</object>
+      <object>objects\obj_laserRight</object>
+      <object>objects\obj_chain</object>
+      <object>objects\obj_laserDown</object>
+      <object>objects\obj_laserUp</object>
     </objects>
-    <object>objects\obj_liquidWaterTop_mid</object>
-    <object>objects\obj_liquidWater</object>
   </objects>
   <rooms name="rooms">
+    <room>rooms\room2</room>
     <room>rooms\room1</room>
     <room>rooms\room0</room>
   </rooms>

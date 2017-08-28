@@ -193,6 +193,11 @@
     <instance objName="obj_liquidWaterTop_mid" x="455" y="455" name="inst_3F097766" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_liquidWaterTop_mid" x="385" y="455" name="inst_B3315376" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_slice04_04" x="735" y="210" name="inst_67C3F9CA" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_slice03_03" x="350" y="315" name="inst_004C3941" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_laserLeft" x="735" y="35" name="inst_C1608A56" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_laserRight" x="630" y="35" name="inst_49D40CAF" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_laserYellowHorizontal" x="665" y="35" name="inst_FD1A77BC" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_laserYellowHorizontal" x="700" y="35" name="inst_8140ED62" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
   </instances>
   <tiles/>
   <PhysicsWorld>0</PhysicsWorld>
