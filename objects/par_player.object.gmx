@@ -95,26 +95,6 @@ lockyellow = false;
           </argument>
         </arguments>
       </action>
-      <action>
-        <libid>1</libid>
-        <id>603</id>
-        <kind>7</kind>
-        <userelative>0</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>-1</useapplyto>
-        <exetype>2</exetype>
-        <functionname></functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-        <arguments>
-          <argument>
-            <kind>1</kind>
-            <string></string>
-          </argument>
-        </arguments>
-      </action>
     </event>
     <event eventtype="3" enumb="0">
       <action>
@@ -167,26 +147,13 @@ if(isfacingright) {
 
 
 
-inst_laser = instance_place(x + hsp,y + vsp, par_laser);
 
-with(inst_laser) {
-    other.lasercollision = lasercollision;
-}
 
 if(place_meeting(x,y + 1, par_wall) &amp;&amp; KJ) {
     vsp = -jumpspeed;
 }
 
 
-
-//Check Collision with obj_away
-with(instance_place(x,y + vsp,par_on_way)) {
-    if(bbox_top &gt; other.bbox_bottom) {
-        other.away = true;
-    } else {
-       other.away = false;
-    }
-}
 
 //Collision Horizontal - obj_wall
 if(place_meeting(x + hsp,y, par_wall)) {
@@ -198,7 +165,13 @@ if(place_meeting(x + hsp,y, par_wall)) {
     hsp = 0;
 }
 
-//Laser Collision
+//Start Check With Collision Laser
+inst_laser = instance_place(x + hsp,y + vsp, par_laser);
+
+with(inst_laser) {
+    other.lasercollision = lasercollision;
+}
+
 if(lasercollision) {
     //Collision Horizontal - obj_laser
     if(place_meeting(x + hsp,y, par_laser)) {
@@ -219,7 +192,9 @@ if(lasercollision) {
         
         vsp = 0;     
     }
-}
+} //End Check With Collision Laser
+
+
 
 //Collision Vertical - obj_wall
 if(place_meeting(x,y + vsp, par_wall)) {
@@ -239,6 +214,19 @@ if(place_meeting(x,y + vsp, obj_weight_dragging)) {
     }
     
     vsp = 0;     
+}
+
+//Check Collision with obj_away
+with(instance_place(x,y + vsp,par_on_way)) {
+/*
+    if(bbox_top &gt; other.bbox_bottom) {
+        other.away = true;
+    } else {
+       other.away = false;
+    }
+    */
+    
+    other.away = bbox_top &gt; other.bbox_bottom; 
 }
 
 //Collision Vertical - obj_away
@@ -288,22 +276,9 @@ if(place_meeting(x,y + vsp, par_ladder)) {
     
 }
 
-/*
-//Spring Collision
-with(instance_place(x,y + 11, par_spring)) {
-    if(bbox_top &gt; other.bbox_bottom) {
-        if(other.vsp &gt; -0.1) {
-            other.vsp = -other.forcespring;
-        }
-    } 
-}
-*/
-
 y += vsp;
 x += hsp;
 
-
-show_debug_message(lasercollision);
 
 
 </string>
@@ -336,26 +311,6 @@ global.gold_coins = 0;
 global.coins = global.blonze_coins + global.silver_coins + global.gold_coins;
 
 </string>
-          </argument>
-        </arguments>
-      </action>
-      <action>
-        <libid>1</libid>
-        <id>603</id>
-        <kind>7</kind>
-        <userelative>0</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>-1</useapplyto>
-        <exetype>2</exetype>
-        <functionname></functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-        <arguments>
-          <argument>
-            <kind>1</kind>
-            <string></string>
           </argument>
         </arguments>
       </action>

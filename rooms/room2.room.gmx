@@ -166,6 +166,12 @@
     <instance objName="obj_ladder_top" x="595" y="175" name="inst_86BBD931" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_ladder_top" x="560" y="315" name="inst_012FE917" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_slice03_03_metal" x="525" y="315" name="inst_9202CF06" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="par_enemy" x="700" y="35" name="inst_F0584DB9" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_slice03_03_metal" x="665" y="70" name="inst_20A50B9A" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_slice03_03_metal" x="700" y="70" name="inst_5E724AE5" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_slice03_03_metal" x="735" y="70" name="inst_AFBB754B" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_slice04_04_metal" x="770" y="70" name="inst_052C6242" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_slice02_02_metal" x="630" y="70" name="inst_86DC9995" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
   </instances>
   <tiles/>
   <PhysicsWorld>0</PhysicsWorld>

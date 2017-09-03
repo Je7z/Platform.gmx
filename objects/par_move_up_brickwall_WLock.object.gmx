@@ -5,7 +5,7 @@
   <visible>-1</visible>
   <depth>0</depth>
   <persistent>0</persistent>
-  <parentName>&lt;undefined&gt;</parentName>
+  <parentName>par_wall</parentName>
   <maskName>&lt;undefined&gt;</maskName>
   <events>
     <event eventtype="0" enumb="0">
@@ -25,10 +25,17 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>image_index = 0;
-image_speed = 0;
+            <string>///Create
 
-truetrue = false;
+dir = 1;
+movespeed = 0.5;
+
+moveuptrue = false;
+
+insta_button = obj_lockblue;
+
+
+
 </string>
           </argument>
         </arguments>
@@ -51,17 +58,18 @@ truetrue = false;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>
-if(place_meeting(x,y,par_player)) {
-    if(keyboard_check_pressed(ord("C"))) {
-        truetrue = !truetrue;
+            <string>///Steps
+
+if(insta_button.truetrue == true) {
+    if(place_meeting(x,y, obj_block)) {
+        moveuptrue = true;
+    } else {
+        moveuptrue = false;
     }
 }
 
-if(truetrue) {
-    image_index = 1;
-} else {
-    image_index = 0;
+if(!moveuptrue &amp;&amp; insta_button.truetrue) {
+    y += movespeed * -1;
 }
 
 </string>

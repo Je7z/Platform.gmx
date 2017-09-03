@@ -7,8 +7,6 @@
   <sounds name="sound"/>
   <sprites name="sprites">
     <sprite>sprites\spr_player</sprite>
-    <sprite>sprites\spr_ladder_mid</sprite>
-    <sprite>sprites\spr_ladder_top</sprite>
     <sprites name="spr tileset - glass">
       <sprite>sprites\spr_slice28_28</sprite>
       <sprite>sprites\spr_slice32_32</sprite>
@@ -23,9 +21,6 @@
       <sprite>sprites\spr_slice02_02</sprite>
     </sprites>
     <sprite>sprites\spr_spring</sprite>
-    <sprite>sprites\spr_coin_blonze</sprite>
-    <sprite>sprites\spr_coin_gold</sprite>
-    <sprite>sprites\spr_coin_silver</sprite>
     <sprites name="Keys">
       <sprite>sprites\spr_keyYellow</sprite>
       <sprite>sprites\spr_keyRed</sprite>
@@ -44,15 +39,7 @@
       <sprite>sprites\spr_buttonGreen</sprite>
       <sprite>sprites\spr_buttonBlue</sprite>
     </sprites>
-    <sprite>sprites\spr_weight</sprite>
-    <sprite>sprites\spr_weightChained</sprite>
     <sprite>sprites\spr_chain</sprite>
-    <sprite>sprites\spr_bridge</sprite>
-    <sprite>sprites\spr_bridgeLogs</sprite>
-    <sprite>sprites\spr_liquidWaterTop_mid</sprite>
-    <sprite>sprites\spr_liquidWater</sprite>
-    <sprite>sprites\spr_laserRight</sprite>
-    <sprite>sprites\spr_laserLeft</sprite>
     <sprites name="spr tileset - metal">
       <sprite>sprites\spr_slice03_03_metal</sprite>
       <sprite>sprites\spr_slice04_04_metal</sprite>
@@ -87,8 +74,36 @@
       <sprite>sprites\spr_switch_green</sprite>
     </sprites>
     <sprite>sprites\spr_walking</sprite>
-    <sprite>sprites\spr_laserUp</sprite>
-    <sprite>sprites\spr_laserDown</sprite>
+    <sprite>sprites\spr_enemy</sprite>
+    <sprites name="Ladder">
+      <sprite>sprites\spr_ladder_top</sprite>
+      <sprite>sprites\spr_ladder_mid</sprite>
+    </sprites>
+    <sprites name="Water">
+      <sprite>sprites\spr_liquidWaterTop_mid</sprite>
+      <sprite>sprites\spr_liquidWater</sprite>
+    </sprites>
+    <sprites name="Weight">
+      <sprite>sprites\spr_weight</sprite>
+      <sprite>sprites\spr_weightChained</sprite>
+    </sprites>
+    <sprites name="Gun Laser">
+      <sprite>sprites\spr_laserDown</sprite>
+      <sprite>sprites\spr_laserUp</sprite>
+      <sprite>sprites\spr_laserLeft</sprite>
+      <sprite>sprites\spr_laserRight</sprite>
+    </sprites>
+    <sprites name="Coins">
+      <sprite>sprites\spr_coin_silver</sprite>
+      <sprite>sprites\spr_coin_gold</sprite>
+      <sprite>sprites\spr_coin_blonze</sprite>
+    </sprites>
+    <sprites name="Bridge">
+      <sprite>sprites\spr_bridgeLogs</sprite>
+      <sprite>sprites\spr_bridge</sprite>
+    </sprites>
+    <sprite>sprites\spr_brickWall_3x1</sprite>
+    <sprite>sprites\spr_block</sprite>
   </sprites>
   <backgrounds name="background"/>
   <paths name="paths"/>
@@ -123,6 +138,8 @@
       <object>objects\par_switch</object>
       <object>objects\par_bridge</object>
       <object>objects\par_laser</object>
+      <object>objects\par_move_up_brickwall_WButton</object>
+      <object>objects\par_move_up_brickwall_WLock</object>
     </objects>
     <objects name="obj_tileset_wall">
       <object>objects\obj_slice32_32</object>
@@ -169,27 +186,47 @@
       <object>objects\obj_weightChained</object>
     </objects>
     <objects name="OBJ - Button">
-      <object>objects\obj_buttonyellow</object>
-      <object>objects\obj_buttonred</object>
-      <object>objects\obj_buttongreen</object>
-      <object>objects\obj_buttonblue</object>
+      <objects name="Move- Vertical">
+        <objects name="Yellow - BrickWall">
+          <object>objects\obj_brickWall_3x1_WL_Yellow</object>
+          <object>objects\obj_buttonyellow</object>
+        </objects>
+        <objects name="Green - BrickWall">
+          <object>objects\obj_buttongreen</object>
+          <object>objects\obj_brickWall_3x1_WL_Green</object>
+        </objects>
+        <objects name="Blue - BrickWall">
+          <object>objects\obj_buttonblue</object>
+          <object>objects\obj_brickWall_3x1_WL_Blue</object>
+        </objects>
+        <objects name="Red - BrickWall">
+          <object>objects\obj_buttonred</object>
+          <object>objects\obj_brickWall_3x1_WL_Red</object>
+        </objects>
+      </objects>
     </objects>
     <objects name="Keys And Locks">
-      <objects name="Blue">
-        <object>objects\obj_lockblue</object>
-        <object>objects\obj_keyblue</object>
-      </objects>
-      <objects name="Green">
-        <object>objects\obj_lockgreen</object>
-        <object>objects\obj_keygreen</object>
-      </objects>
-      <objects name="Red">
-        <object>objects\obj_lockred</object>
-        <object>objects\obj_keyred</object>
-      </objects>
-      <objects name="Yellow">
-        <object>objects\obj_lockyellow</object>
-        <object>objects\obj_keyyellow</object>
+      <objects name="Move - Vertical">
+        <objects name="Yellow - Brick Wall">
+          <object>objects\obj_lockyellow</object>
+          <object>objects\obj_keyyellow</object>
+          <object>objects\obj_brickWall_3x1_WButton_Yellow</object>
+        </objects>
+        <objects name="Red - Brick Wall">
+          <object>objects\obj_lockred</object>
+          <object>objects\obj_keyred</object>
+          <object>objects\obj_brickWall_3x1_WButton_Red</object>
+        </objects>
+        <objects name="Green - Brick Wall">
+          <object>objects\obj_lockgreen</object>
+          <object>objects\obj_keygreen</object>
+          <object>objects\obj_brickWall_3x1_WButton_Green</object>
+        </objects>
+        <objects name="Blue - Brick Wall">
+          <object>objects\obj_lockblue</object>
+          <object>objects\obj_keyblue</object>
+          <object>objects\obj_brickWall_3x1_WButton_Blue</object>
+        </objects>
       </objects>
     </objects>
     <objects name="Switch and Laser">
@@ -237,10 +274,29 @@
       <object>objects\obj_laserDown</object>
       <object>objects\obj_laserUp</object>
     </objects>
+    <object>objects\par_enemy</object>
+    <objects name="OBJ Tileset Wall - AWAY">
+      <objects name="Away">
+        <object>objects\obj_slice02_02_away</object>
+        <object>objects\obj_slice03_03_away</object>
+        <object>objects\obj_slice04_04_away</object>
+        <object>objects\obj_slice20_20_away</object>
+        <object>objects\obj_slice19_19_away</object>
+      </objects>
+      <objects name="Scener">
+        <object>objects\obj_slice29_29_away</object>
+        <object>objects\obj_slice24_24_away</object>
+        <object>objects\obj_slice23_23_away</object>
+        <object>objects\obj_slice32_32_away</object>
+        <object>objects\obj_slice28_28_away</object>
+      </objects>
+    </objects>
+    <object>objects\obj_block</object>
   </objects>
   <rooms name="rooms">
-    <room>rooms\room2</room>
+    <room>rooms\room3</room>
     <room>rooms\room1</room>
+    <room>rooms\room2</room>
     <room>rooms\room0</room>
   </rooms>
   <help>

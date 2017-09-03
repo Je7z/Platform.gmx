@@ -20,6 +20,6 @@
   <width>35</width>
   <height>35</height>
   <frames>
-    <frame index="0">images\spr_wall_0.png</frame>
+    <frame index="0">images\spr_brickWallModify_down_0.png</frame>
   </frames>
 </sprite>

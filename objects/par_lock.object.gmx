@@ -26,6 +26,9 @@
           <argument>
             <kind>1</kind>
             <string>keytrue = false;
+truetrue = false;
+
+image_speed = 0;
 </string>
           </argument>
         </arguments>
@@ -49,7 +52,8 @@
           <argument>
             <kind>1</kind>
             <string>if(place_meeting(x,y, par_player) &amp;&amp; keytrue) {
-    instance_destroy();
+    image_index = 1;
+    truetrue = true;
 }
 </string>
           </argument>
